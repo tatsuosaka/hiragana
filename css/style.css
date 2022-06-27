@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family:'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: #523A34;
+}
+
+h1 {
+    color: rgb(58, 55, 55);
+    font-size: 2.5rem;
+}
+
+.btn {
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bolder;
+    color: rgb(58, 55, 55);
+    font-size: 2.5rem;
+    padding: 2rem;
+    border-radius: 20px;
+    border: 0;
+    
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #B87D4B;
+    color: #fff;
+    cursor: pointer;
+}
+
+.colorpallete {
+    background-color: #CFF27E;
+    background-color: #F2DD6E;
+    background-color: #E5B25D;
+    background-color: #B87D4B;
+    background-color: #523A34;
+}
+
+.flexAlign {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+    background-color: #523A34;
+    
+}
+
+.box {
+    padding: 30px;
+    width: 80%;
+    border-radius: 25px;
+    background-color: #E5B25D;
+    text-align: center;
+   
+}
+
+.titleBox {
+    margin-top: 40px;
+    text-align: center;
+    color: rgb(206, 193, 193);
+}
