@@ -48,16 +48,31 @@ h1 {
     justify-content: center;
     height: 75vh;
     background-color: #523A34;
-    
 }
 
 .box {
+    display: flex;
     padding: 30px;
     width: 80%;
     border-radius: 25px;
     background-color: #E5B25D;
-    text-align: center;
-   
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+.box img {
+    height: 100px;
+    width: 100px;
+}
+
+.box div button {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    border: none;
+    font-size: larger;
+    font-weight: 700;
 }
 
 .titleBox {
