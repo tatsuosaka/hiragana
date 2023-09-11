@@ -56,6 +56,14 @@ const buttons = [
 ]
 function onInit(){
     document.getElementById("btn").addEventListener("click", hiragana);
+    catEasterEgg();
+}
+function catEasterEgg(){
+    const cat = document.getElementById("cat");
+    cat.addEventListener("click", () => {
+        cat.style.top = "-140px";
+    })
+
 }
 function hiragana(){
 
