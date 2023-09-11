@@ -91,11 +91,11 @@ function hiragana(){
         button3.innerText = formatText(randomItem3);
         let correctItemFormated = formatText(correctItem);
         randomButton.innerText = formatText(correctItem);
-        let score = 0;
         buttonClick("button1",correctItemFormated, score);
         buttonClick("button2",correctItemFormated, score);
         buttonClick("button3",correctItemFormated, score);
-}
+    }
+    let score = 0;
 
 
 function formatText(random) {
@@ -113,7 +113,7 @@ function resetButtons(){
         button.style.backgroundColor = "#fff";
     })
 }
-function buttonClick(button, correctItem, score){
+function buttonClick(button, correctItem){
     document.getElementById(button).addEventListener("click", () => {
         let buttonElement = document.getElementById(button)
         let buttonText = buttonElement.innerText;
@@ -121,8 +121,7 @@ function buttonClick(button, correctItem, score){
         
             buttonElement.style.backgroundColor = "#b3ff7a"
             setTimeout(function(){
-                debugger
-                score+ 1;
+                score++;
                 document.getElementById("score").innerText = score;
                 hiragana();
             },2000);
