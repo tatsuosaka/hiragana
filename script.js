@@ -54,28 +54,37 @@ const buttons = [
     "button2",
     "button3"
 ]
-
-document.getElementById("btn").addEventListener("click", () => {
-    let img = document.getElementById("hiraganaImg");
-    const correctItem = hiraganas[Math.floor(Math.random() * hiraganas.length)];
-    const randomItem1 = hiraganas[Math.floor(Math.random() * hiraganas.length)];
-    const randomItem2 = hiraganas[Math.floor(Math.random() * hiraganas.length)];
-    const randomItem3 = hiraganas[Math.floor(Math.random() * hiraganas.length)];
-    const randomButtonId = buttons[Math.floor(Math.random() * buttons.length)];
-    let randomButton = document.getElementById(randomButtonId);
-    img.src = correctItem;
-
-    let button1 = document.getElementById("button1");
-    let button2 = document.getElementById("button2");
-    let button3 = document.getElementById("button3");
-    button1.innerText = formatText(randomItem1);
-    button2.innerText = formatText(randomItem2);
-    button3.innerText = formatText(randomItem3);
-    randomButton.innerText = formatText(correctItem);
+function onInit(){
+    document.getElementById("btn").addEventListener("click", hiragana);
+}
+function hiragana(){
+        let startButton = document.getElementById("btn");
+        startButton.style.display = "none";
+        resetButtons();
+        let img = document.getElementById("hiraganaImg");
+        const correctItem = hiraganas[Math.floor(Math.random() * hiraganas.length)];
+        const randomItem1 = hiraganas[Math.floor(Math.random() * hiraganas.length)];
+        const randomItem2 = hiraganas[Math.floor(Math.random() * hiraganas.length)];
+        const randomItem3 = hiraganas[Math.floor(Math.random() * hiraganas.length)];
+        const randomButtonId = buttons[Math.floor(Math.random() * buttons.length)];
+        let randomButton = document.getElementById(randomButtonId);
+        img.src = correctItem;
     
-    let text = document.getElementById("text");
-    text.innerText = formatText(correctItem);
-})
+        let button1 = document.getElementById("button1");
+        let button2 = document.getElementById("button2");
+        let button3 = document.getElementById("button3");
+        button1.innerText = formatText(randomItem1);
+        button2.innerText = formatText(randomItem2);
+        button3.innerText = formatText(randomItem3);
+        let correctItemFormated = formatText(correctItem);
+        randomButton.innerText = formatText(correctItem);
+        buttonClick("button1",correctItemFormated);
+        buttonClick("button2",correctItemFormated);
+        buttonClick("button3",correctItemFormated);
+        let text = document.getElementById("text");
+        text.innerText = formatText(correctItem);
+}
+
 
 function formatText(random) {
     const parts = random.split('/');
@@ -84,3 +93,28 @@ function formatText(random) {
     const finalResult = resultParts[0];
     return finalResult
 }
+
+
+function resetButtons(){
+    buttons.forEach((element) => {
+        let button = document.getElementById(element);
+        button.style.backgroundColor = "#fff";
+    })
+}
+function buttonClick(button, correctItem){
+    document.getElementById(button).addEventListener("click", () => {
+        let buttonElement = document.getElementById(button)
+        let buttonText = buttonElement.innerText;
+        if (buttonText == correctItem){
+            buttonElement.style.backgroundColor = "green"
+            setTimeout(function(){
+                hiragana();
+            },2000);
+        } else {
+            buttonElement.style.backgroundColor = "red"
+        }
+    })
+}
+
+
+onInit();

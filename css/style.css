@@ -51,6 +51,7 @@ h1 {
 }
 
 .box {
+    position: relative;
     display: flex;
     padding: 30px;
     width: 80%;
@@ -60,12 +61,16 @@ h1 {
     justify-content: center;
     flex-direction: column;
     gap: 30px;
+    min-height: 500px;
 }
 .box img {
     height: 100px;
     width: 100px;
 }
-
+.box div {
+    position: absolute;
+    bottom: 50px;
+}
 .box div button {
     width: 80px;
     height: 80px;
@@ -73,6 +78,12 @@ h1 {
     border: none;
     font-size: larger;
     font-weight: 700;
+    background-color: #ffff;
+    transition: 0.3s;
+}
+.box div button:hover {
+    cursor: pointer;
+    padding-top: 10px;
 }
 
 .titleBox {
