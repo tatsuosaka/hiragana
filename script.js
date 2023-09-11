@@ -58,10 +58,15 @@ function onInit(){
     document.getElementById("btn").addEventListener("click", hiragana);
 }
 function hiragana(){
+
+        let buttonsDiv = document.querySelector(".box div");
+        buttonsDiv.style.display = "flex"
         let startButton = document.getElementById("btn");
         startButton.style.display = "none";
         resetButtons();
         let img = document.getElementById("hiraganaImg");
+        img.style.display = "block";
+
         const correctItem = hiraganas[Math.floor(Math.random() * hiraganas.length)];
         const randomItem1 = hiraganas[Math.floor(Math.random() * hiraganas.length)];
         const randomItem2 = hiraganas[Math.floor(Math.random() * hiraganas.length)];
@@ -78,11 +83,10 @@ function hiragana(){
         button3.innerText = formatText(randomItem3);
         let correctItemFormated = formatText(correctItem);
         randomButton.innerText = formatText(correctItem);
-        buttonClick("button1",correctItemFormated);
-        buttonClick("button2",correctItemFormated);
-        buttonClick("button3",correctItemFormated);
-        let text = document.getElementById("text");
-        text.innerText = formatText(correctItem);
+        let score = 0;
+        buttonClick("button1",correctItemFormated, score);
+        buttonClick("button2",correctItemFormated, score);
+        buttonClick("button3",correctItemFormated, score);
 }
 
 
@@ -101,17 +105,21 @@ function resetButtons(){
         button.style.backgroundColor = "#fff";
     })
 }
-function buttonClick(button, correctItem){
+function buttonClick(button, correctItem, score){
     document.getElementById(button).addEventListener("click", () => {
         let buttonElement = document.getElementById(button)
         let buttonText = buttonElement.innerText;
         if (buttonText == correctItem){
-            buttonElement.style.backgroundColor = "green"
+        
+            buttonElement.style.backgroundColor = "#b3ff7a"
             setTimeout(function(){
+                debugger
+                score+ 1;
+                document.getElementById("score").innerText = score;
                 hiragana();
             },2000);
         } else {
-            buttonElement.style.backgroundColor = "red"
+            buttonElement.style.backgroundColor = "#ff6464"
         }
     })
 }

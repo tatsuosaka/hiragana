@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Itim');
 
 * {
     margin: 0;
     padding: 0;
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Itim', cursive;
 }
 
 body {
@@ -16,7 +16,7 @@ h1 {
 }
 
 .btn {
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Itim', cursive;
     font-weight: bolder;
     color: rgb(58, 55, 55);
     font-size: 2.5rem;
@@ -62,14 +62,20 @@ h1 {
     flex-direction: column;
     gap: 30px;
     min-height: 500px;
+    max-width: 600px;
 }
 .box img {
+    display: none;
     height: 100px;
     width: 100px;
+    user-select: none;
+    pointer-events: none;
 }
 .box div {
+    display: none;
     position: absolute;
     bottom: 50px;
+    gap: 15px;
 }
 .box div button {
     width: 80px;
@@ -79,11 +85,46 @@ h1 {
     font-size: larger;
     font-weight: 700;
     background-color: #ffff;
-    transition: 0.3s;
+    bottom: 0px;
+    transition: all 0.3s ease-in-out;
 }
 .box div button:hover {
     cursor: pointer;
-    padding-top: 10px;
+    bottom: 10px;
+    position: relative;
+}
+
+.box p {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 30px;
+    top: 30px;
+    font-size: x-large;
+    color: #fff;
+    background-color: #523A34;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.by {
+    font-size: small;
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    color: #fff;
+}
+
+.by a {
+    color: #E5B25D;
+    margin-left: 5px;
+    transition: 0.3s;
+}
+
+.by a:hover {
+    color: #e49a1a;
 }
 
 .titleBox {
