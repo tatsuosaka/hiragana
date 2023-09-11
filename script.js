@@ -67,11 +67,11 @@ function catEasterEgg(){
 }
 function hiragana(){
 
+        resetButtons();
         let buttonsDiv = document.querySelector(".box div");
         buttonsDiv.style.display = "flex"
         let startButton = document.getElementById("btn");
         startButton.style.display = "none";
-        resetButtons();
         let img = document.getElementById("hiraganaImg");
         img.style.display = "block";
 
@@ -111,6 +111,15 @@ function resetButtons(){
     buttons.forEach((element) => {
         let button = document.getElementById(element);
         button.style.backgroundColor = "#fff";
+        button.disabled = false;
+
+    })
+}
+
+function blockButtons(){
+    buttons.forEach((element) => {
+        let button = document.getElementById(element);  
+        button.disabled = true;
     })
 }
 function buttonClick(button, correctItem){
@@ -118,7 +127,7 @@ function buttonClick(button, correctItem){
         let buttonElement = document.getElementById(button)
         let buttonText = buttonElement.innerText;
         if (buttonText == correctItem){
-        
+            blockButtons();
             buttonElement.style.backgroundColor = "#b3ff7a"
             setTimeout(function(){
                 score++;
