@@ -1,2 +1,3 @@
 # Hiragana
- Aplicativo para estudar Hiragana
+
+ Pagina/Jogo para estudo de Hiragana
