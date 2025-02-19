@@ -1,16 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Itim');
+@import url("https://fonts.googleapis.com/css2?family=Itim");
 
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Itim', cursive;
+    font-family: "Itim", cursive;
 }
 
 body {
-    background-color: #523A34;
+    background-color: #523a34;
 }
 
-body, html {
+body,
+html {
     height: 100%;
 }
 
@@ -22,29 +23,29 @@ h1 {
 }
 
 .btn {
-    font-family: 'Itim', cursive;
+    font-family: "Itim", cursive;
     font-weight: bolder;
     color: rgb(58, 55, 55);
     font-size: 2.5rem;
     padding: 2rem;
     border-radius: 20px;
     border: 0;
-    
+
     transition: 0.3s;
 }
 
 .btn:hover {
-    background-color: #B87D4B;
+    background-color: #b87d4b;
     color: #fff;
     cursor: pointer;
 }
 
 .colorpallete {
-    background-color: #CFF27E;
-    background-color: #F2DD6E;
-    background-color: #E5B25D;
-    background-color: #B87D4B;
-    background-color: #523A34;
+    background-color: #cff27e;
+    background-color: #f2dd6e;
+    background-color: #e5b25d;
+    background-color: #b87d4b;
+    background-color: #523a34;
 }
 
 .flexAlign {
@@ -60,12 +61,12 @@ h1 {
     padding: 30px;
     width: 80%;
     border-radius: 25px;
-    background-color: #E5B25D;
+    background-color: #e5b25d;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 30px;
-    min-height: 500px;
+    min-height: 350px;
     max-width: 600px;
 }
 .container {
@@ -87,9 +88,10 @@ h1 {
     position: absolute;
     top: -120px;
     right: 20px;
-    width: 200px;
-    z-index: -1;
+    width: 100px;
+    z-index: 1;
     transition: 0.3s;
+    user-select: none;
 }
 .cat:hover {
     cursor: pointer;
@@ -99,6 +101,7 @@ h1 {
     position: absolute;
     bottom: 50px;
     gap: 15px;
+    z-index: 1;
 }
 .box div button {
     width: 80px;
@@ -127,7 +130,7 @@ h1 {
     top: 30px;
     font-size: x-large;
     color: #fff;
-    background-color: #523A34;
+    background-color: #523a34;
     padding: 10px;
     border-radius: 15px;
 }
@@ -141,7 +144,7 @@ h1 {
 }
 
 .by a {
-    color: #E5B25D;
+    color: #e5b25d;
     margin-left: 5px;
     transition: 0.3s;
 }
@@ -151,6 +154,7 @@ h1 {
 }
 
 .titleBox {
+    user-select: none;
     text-align: center;
     color: rgb(206, 193, 193);
 }
