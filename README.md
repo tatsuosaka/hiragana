@@ -8,5 +8,5 @@ Este é um pequeno jogo de memória desenvolvido para ajudar no aprendizado dos 
 - **JavaScript**: Lógica do jogo, manipulação e interatividade.
 
 ## Funcionalidades
-- Combinação de pares de Hiragana.
+- Memorizar o simbolo correto de Hiragana.
 - Interface simples e intuitiva.
