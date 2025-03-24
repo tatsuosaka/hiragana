@@ -10,3 +10,7 @@ Este é um pequeno jogo de memória desenvolvido para ajudar no aprendizado dos 
 ## Funcionalidades
 - Memorizar o simbolo correto de Hiragana.
 - Interface simples e intuitiva.
+
+https://tatsuosaka.github.io/hiragana/
+
+![HIRAGANA](https://github.com/user-attachments/assets/fc54ef01-c9db-4b94-be00-e84fde23e297)
